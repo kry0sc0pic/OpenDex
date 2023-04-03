@@ -4,3 +4,4 @@ openai
 python-dotenv
 flask-cors
 flask-restful
+pandas
