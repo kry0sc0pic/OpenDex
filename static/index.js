@@ -9,6 +9,8 @@ submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     // prevent default form submission
     const prompt = document.getElementById('prompt').value;
+    const apikey = document.getElementById('key').value;
+    const model = document.getElementById('model').value;
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/api');
     xhr.responseType = 'json';
@@ -26,7 +28,7 @@ submitButton.addEventListener('click', (event) => {
         loader.style.display = 'none';
         submitButton.style.display = 'block';
     };
-    xhr.send(JSON.stringify({ prompt: prompt }));
+    xhr.send(JSON.stringify({ prompt: prompt, key: apikey, model: model }));
 
 
 });

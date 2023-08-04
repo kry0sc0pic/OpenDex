@@ -13,16 +13,27 @@
     </div>
     <div class="form-container">
         <form>
+            
+
             <label for="prompt">Question</label>
             <input type="text" id="prompt" name="prompt">
 
-            <!-- <label for="model">OpenAI Model:</label>
-            <select name="model" id="model">
-                <option value="text-davinci-003">text-davinci-003</option>
-            </select><br> -->
+            
 
             <button id="submit" type="submit">Ask OpenDex</button>
             <div id="loader" class="loader"></div>
+
+            <br>
+
+            <label for="model">OpenAI Model:</label>
+            <select name="model" id="model">
+                <option value="text-davinci-003">text-davinci-003</option>
+                <!-- <option value="gpt-3.5-turbo">gpt-3.5-turbo</option> -->
+            </select><br>
+
+            <label for="key">OpenAI Key</label>
+            <input type="text" id="key" name="key">
+
         </form>
         <!-- add a section to display the response -->
         <div id="response-div">
