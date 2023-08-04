@@ -41,4 +41,4 @@ python app.py
 
 
 ## Youtube Video
-*coming soon*
+https://youtu.be/hpps9CKD0pk
