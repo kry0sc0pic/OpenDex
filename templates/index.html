@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenDex</title>
+    <!-- Link to the external stylesheet for this page -->
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
+    <!-- Main container for the logo -->
     <div class="logo">
-
         <span>OpenDex</span>
     </div>
+
+    <!-- Container for the main form and user interaction elements -->
     <div class="form-container">
         <form>
-            
-
+            <!-- Input for the user's question -->
             <label for="prompt">Question</label>
-            <input type="text" id="prompt" name="prompt">
+            <input type="text" id="prompt" name="prompt" placeholder="e.g., What are the weaknesses of Pikachu?">
 
-            
-
+            <!-- The main submit button, which triggers the API call -->
             <button id="submit" type="submit">Ask OpenDex</button>
+            <!-- A loader/spinner element, hidden by default -->
             <div id="loader" class="loader"></div>
 
             <br>
 
+            <!-- Dropdown to select the OpenAI model -->
             <label for="model">OpenAI Model:</label>
             <select name="model" id="model">
                 <option value="text-davinci-003">text-davinci-003</option>
+                <!-- A second model option, currently commented out -->
                 <!-- <option value="gpt-3.5-turbo">gpt-3.5-turbo</option> -->
             </select><br>
 
+            <!-- Input for the user's OpenAI API key -->
             <label for="key">OpenAI Key</label>
-            <input type="text" id="key" name="key">
+            <input type="text" id="key" name="key" placeholder="sk-...">
 
         </form>
-        <!-- add a section to display the response -->
-        <div id="response-div">
-            <p id="response"></p>
 
+        <!-- The section where the response from the API will be displayed -->
+        <div id="response-div">
+            <!-- The specific paragraph element that will contain the response text -->
+            <p id="response"></p>
         </div>
 
     </div>
+
+    <!-- Link to the external JavaScript file that handles form submission and API logic -->
     <script src="/static/index.js"></script>
 </body>
 
