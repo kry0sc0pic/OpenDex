@@ -1,8 +1,14 @@
+/* --- Global Styles & Font Import --- */
+
+/* Import the 'Lexend Deca' font from Google Fonts for a consistent look. */
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;700&display=swap');
 
+/* Apply the imported font to all elements for universal typography. */
 * {
     font-family: 'Lexend Deca', sans-serif;
 }
+
+/* --- Logo Styling --- */
 
 .logo {
     font-size: 32px;
@@ -17,15 +23,21 @@
     height: auto;
 }
 
+/* --- Form Container Styling --- */
+
+/* Styles for the main container of the form. */
 .form-container {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the form horizontally. */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc; /* Add a subtle shadow for depth. */
 }
 
+/* --- Form Input & Button Styling --- */
+
+/* Styles for text input fields. */
 .form-container input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -33,9 +45,10 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width. */
 }
 
+/* Styles for the main submit button. */
 .form-container button[type="submit"] {
     background-color: #333;
     color: #fff;
@@ -46,16 +59,20 @@
     cursor: pointer;
 }
 
+/* Hover effect for the submit button to provide user feedback. */
 .form-container button[type="submit"]:hover {
     background-color: #555;
 }
 
-/* add some styling for the dropdown */
+/* --- Dropdown (Select) Styling --- */
+
+/* Basic positioning for dropdowns (though not heavily used here). */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Styles for the model selection dropdown. */
 .form-container select {
     width: 100%;
     padding: 10px;
@@ -66,24 +83,24 @@
     box-sizing: border-box;
 }
 
+/* --- Loader/Spinner Animation --- */
+
+/* Styling for the loading spinner. */
 .loader {
-    border: 5px solid #f3f3f3;
-    /* visibility: hidden; */
-    display: none;
-    /* Light grey */
-    border-top: 5px solid #ed7777;
-    /* Blue */
-    border-radius: 50%;
+    border: 5px solid #f3f3f3; /* Light grey base circle. */
+    display: none; /* Hidden by default. Made visible via JavaScript. */
+    border-top: 5px solid #ed7777; /* The colored part that spins. */
+    border-radius: 50%; /* Makes it a circle. */
     width: 30px;
     height: 30px;
-    animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; /* Apply the spin animation. */
 }
 
+/* Keyframe animation for the loader's spinning effect. */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
